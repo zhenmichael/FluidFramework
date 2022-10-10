@@ -194,4 +194,6 @@ export interface IMember {
      * The set of connections the user has made, e.g. from multiple tabs or devices.
      */
     connections: IConnection[];
+
+    connectionId: string;
 }

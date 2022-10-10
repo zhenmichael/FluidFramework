@@ -117,7 +117,11 @@ export abstract class ServiceAudience<M extends IMember = IMember>
     if (clientId === undefined) {
       return undefined;
     }
-    return this.getMember(clientId);
+
+    const member = this.getMember(clientId);
+    if (member) { member.connectionId = clientId; }
+
+    return member;
   }
 
   private getMember(clientId: string): M | undefined {

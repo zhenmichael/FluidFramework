@@ -191,6 +191,7 @@ declare function get_old_InterfaceDeclaration_IMember():
 declare function use_current_InterfaceDeclaration_IMember(
     use: TypeOnly<current.IMember>);
 use_current_InterfaceDeclaration_IMember(
+    // @ts-expect-error compatibility expected to be broken
     get_old_InterfaceDeclaration_IMember());
 
 /*

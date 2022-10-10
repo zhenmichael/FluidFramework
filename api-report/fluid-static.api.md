@@ -88,6 +88,8 @@ export interface IFluidContainerEvents extends IEvent {
 
 // @public
 export interface IMember {
+    // (undocumented)
+    connectionId: string;
     connections: IConnection[];
     userId: string;
 }
