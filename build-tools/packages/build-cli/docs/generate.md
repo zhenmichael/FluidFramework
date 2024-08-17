@@ -9,7 +9,6 @@ Generate commands are used to create/update code, docs, readmes, etc.
 * [`flub generate changelog`](#flub-generate-changelog)
 * [`flub generate changeset`](#flub-generate-changeset)
 * [`flub generate entrypoints`](#flub-generate-entrypoints)
-* [`flub generate latestVersions VERSION PACKAGE_OR_RELEASE_GROUP`](#flub-generate-latestversions-version-package_or_release_group)
 * [`flub generate packlist`](#flub-generate-packlist)
 * [`flub generate releaseNotes`](#flub-generate-releasenotes)
 * [`flub generate typetests`](#flub-generate-typetests)
@@ -21,7 +20,7 @@ Tags asserts by replacing their message with a unique numerical value.
 
 ```
 USAGE
-  $ flub generate assertTags [-v | --quiet] [--disableConfig] [--concurrency <value>] [--branch <value> [--changed |  | 
+  $ flub generate assertTags [-v | --quiet] [--disableConfig] [--concurrency <value>] [--branch <value> [--changed |  |
     |  | [--all | --dir <value> | --packages | -g client|server|azure|build-tools|gitrest|historian|all... |
     --releaseGroupRoot client|server|azure|build-tools|gitrest|historian|all...] | ]] [--private] [--scope <value>... |
     --skipScope <value>...]
@@ -259,41 +258,13 @@ DESCRIPTION
 
 _See code: [src/commands/generate/entrypoints.ts](https://github.com/microsoft/FluidFramework/blob/main/build-tools/packages/build-cli/src/commands/generate/entrypoints.ts)_
 
-## `flub generate latestVersions VERSION PACKAGE_OR_RELEASE_GROUP`
-
-Determines if an input version matches a latest minor release version.
-
-```
-USAGE
-  $ flub generate latestVersions VERSION PACKAGE_OR_RELEASE_GROUP [--json] [-v | --quiet]
-
-ARGUMENTS
-  VERSION                   The version corresponding to the pipeline trigger branch.
-  PACKAGE_OR_RELEASE_GROUP  The name of a package or a release group.
-
-LOGGING FLAGS
-  -v, --verbose  Enable verbose logging.
-      --quiet    Disable all logging.
-
-GLOBAL FLAGS
-  --json  Format output as json.
-
-DESCRIPTION
-  Determines if an input version matches a latest minor release version.
-
-  This command is used in CI to determine if a pipeline was triggered by a release branch with the latest minor version
-  of a major version.
-```
-
-_See code: [src/commands/generate/latestVersions.ts](https://github.com/microsoft/FluidFramework/blob/main/build-tools/packages/build-cli/src/commands/generate/latestVersions.ts)_
-
 ## `flub generate packlist`
 
 Outputs a list of files that will be included in a package based on its 'files' property in package.json and any .npmignore files.
 
 ```
 USAGE
-  $ flub generate packlist [-v | --quiet] [--out <value>] [--concurrency <value>] [--branch <value> [--changed |  |  | 
+  $ flub generate packlist [-v | --quiet] [--out <value>] [--concurrency <value>] [--branch <value> [--changed |  |  |
     | [--all | --dir <value> | --packages | -g client|server|azure|build-tools|gitrest|historian|all... |
     --releaseGroupRoot client|server|azure|build-tools|gitrest|historian|all...] | ]] [--private] [--scope <value>... |
     --skipScope <value>...]
