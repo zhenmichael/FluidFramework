@@ -264,7 +264,7 @@ Outputs a list of files that will be included in a package based on its 'files' 
 
 ```
 USAGE
-  $ flub generate packlist [-v | --quiet] [--out <value>] [--concurrency <value>] [--branch <value> [--changed |  |  |
+  $ flub generate packlist [-v | --quiet] [--out <value>] [--concurrency <value>] [--branch <value> [--changed |  |  | 
     | [--all | --dir <value> | --packages | -g client|server|azure|build-tools|gitrest|historian|all... |
     --releaseGroupRoot client|server|azure|build-tools|gitrest|historian|all...] | ]] [--private] [--scope <value>... |
     --skipScope <value>...]
